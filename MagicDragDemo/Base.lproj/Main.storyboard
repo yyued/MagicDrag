@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="R5o-BO-RX4">
+            <objects>
+                <viewController storyboardIdentifier="Scene_0" id="hNI-RL-9v4" customClass="MGDSceneViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ykc-6d-z2h"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ead-2d-dGv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Myy-XK-pVV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2D4-8r-9H5" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-xO-8M9">
+                                        <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.97254901959999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerX" secondItem="2D4-8r-9H5" secondAttribute="centerX" id="aO8-Gs-rMx"/>
+                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerY" secondItem="2D4-8r-9H5" secondAttribute="centerY" id="eLY-yC-KAn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2D4-8r-9H5" firstAttribute="centerY" secondItem="Myy-XK-pVV" secondAttribute="centerY" id="ENw-gB-bJo"/>
+                            <constraint firstItem="2D4-8r-9H5" firstAttribute="width" secondItem="Myy-XK-pVV" secondAttribute="width" id="Glv-lj-l2u"/>
+                            <constraint firstItem="2D4-8r-9H5" firstAttribute="centerX" secondItem="Myy-XK-pVV" secondAttribute="centerX" id="W0M-01-44V"/>
+                            <constraint firstItem="2D4-8r-9H5" firstAttribute="height" secondItem="Myy-XK-pVV" secondAttribute="height" id="vxC-4k-KoV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZqJ-Md-nzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="1112"/>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="eJ6-g0-9Qj">
+            <objects>
+                <viewController storyboardIdentifier="Scene_1" id="Taq-Lo-hjG" customClass="MGDSceneViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="apg-WM-S6S"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9j-fI-rLY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oOp-e0-fPi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbK-Gs-nJh" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.83921568629999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbK-Gs-nJh" firstAttribute="width" secondItem="oOp-e0-fPi" secondAttribute="width" id="6jb-4N-uqZ"/>
+                            <constraint firstItem="qbK-Gs-nJh" firstAttribute="centerY" secondItem="oOp-e0-fPi" secondAttribute="centerY" id="7GU-SV-bj6"/>
+                            <constraint firstItem="qbK-Gs-nJh" firstAttribute="height" secondItem="oOp-e0-fPi" secondAttribute="height" id="Bn0-wi-hqS"/>
+                            <constraint firstItem="qbK-Gs-nJh" firstAttribute="centerX" secondItem="oOp-e0-fPi" secondAttribute="centerX" id="e0b-PD-nMc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xW2-Db-2Si" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="1112"/>
+        </scene>
+    </scenes>
+</document>
