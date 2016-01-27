@@ -128,4 +128,33 @@ class MGDFixPageLayer: MGDPageLayer {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
+        sceneLayer.hidden = atPage != 0
+        sceneLayer.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: UIScreen.mainScreen().bounds.size.width,
+            height: UIScreen.mainScreen().bounds.size.height
+        )
+        sceneLayer.translatesAutoresizingMaskIntoConstraints = true
+        sceneLayer.autoresizingMask = []
+        addSubview(sceneLayer)
+        super.addSceneLayer(sceneLayer, atPage: atPage)
+    }
+    
+    override func scrolling(contentOffsetX: CGFloat) {
+        let currentPage = Int(contentOffsetX / UIScreen.mainScreen().bounds.size.width)
+        let lastPage = currentPage - 1
+        let nextPage = currentPage + 1
+        for (idx, sceneLayer) in sceneLayerMap {
+            if idx != currentPage && idx != lastPage && idx != nextPage {
+                sceneLayer.hidden = true
+            }
+            else {
+                sceneLayer.hidden = false
+            }
+        }
+        super.scrolling(contentOffsetX)
+    }
+    
 }
