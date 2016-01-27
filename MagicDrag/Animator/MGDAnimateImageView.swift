@@ -10,6 +10,8 @@ import UIKit
 
 class MGDAnimateImageView: UIImageView, MGDAnimatable, MGDAnimationFade {
     
+    @IBInspectable var delaysOfAnimation: CGFloat = 0.0
+    
     @IBInspectable var fadeIn: Bool = false
     @IBInspectable var fadeOut: Bool = false
     

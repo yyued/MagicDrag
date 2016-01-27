@@ -50,7 +50,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-xO-8M9" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
                                         <rect key="frame" x="279" y="290" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
@@ -131,9 +131,34 @@
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdJ-24-ZFj" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
                                         <rect key="frame" x="279" y="170" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsk-s2-MZK" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="279" y="205" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delaysOfAnimation">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDj-Wh-pO8" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="279" y="240" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delaysOfAnimation">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -141,7 +166,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="tDj-Wh-pO8" firstAttribute="centerX" secondItem="Bsk-s2-MZK" secondAttribute="centerX" id="Nrb-HM-Jt4"/>
+                                    <constraint firstItem="Bsk-s2-MZK" firstAttribute="top" secondItem="ZdJ-24-ZFj" secondAttribute="bottom" constant="14" id="Skf-yp-QqX"/>
+                                    <constraint firstItem="tDj-Wh-pO8" firstAttribute="top" secondItem="Bsk-s2-MZK" secondAttribute="bottom" constant="14" id="ZeG-Ee-43t"/>
                                     <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" id="g4b-bo-bvn"/>
+                                    <constraint firstItem="Bsk-s2-MZK" firstAttribute="centerX" secondItem="ZdJ-24-ZFj" secondAttribute="centerX" id="gvG-MQ-UhS"/>
                                     <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="-120" id="veu-wr-DnK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
