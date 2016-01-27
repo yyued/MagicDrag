@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         vc.viewControllers = [
             UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_0") as! MGDSceneViewController,
             UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_1") as! MGDSceneViewController,
+            UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_2") as! MGDSceneViewController,
         ]
         self.presentViewController(vc, animated: false, completion: nil)
     }

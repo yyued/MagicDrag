@@ -131,6 +131,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
@@ -163,6 +164,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xW2-Db-2Si" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228" y="1112"/>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="xmG-Ue-VXk">
+            <objects>
+                <viewController storyboardIdentifier="Scene_2" id="aGO-gB-FBH" customClass="MGDSceneViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kod-gN-2DQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8jR-0r-j0t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZKp-2K-mbz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dej-aW-c3B" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0n-90-2eI" customClass="MGDAnimateView" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="1" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="q0n-90-2eI" firstAttribute="width" secondItem="dej-aW-c3B" secondAttribute="width" id="5cH-zA-THx"/>
+                                    <constraint firstItem="q0n-90-2eI" firstAttribute="centerX" secondItem="dej-aW-c3B" secondAttribute="centerX" id="axI-NC-WXP"/>
+                                    <constraint firstItem="q0n-90-2eI" firstAttribute="centerY" secondItem="dej-aW-c3B" secondAttribute="centerY" id="gT3-ke-2Gv"/>
+                                    <constraint firstItem="q0n-90-2eI" firstAttribute="height" secondItem="dej-aW-c3B" secondAttribute="height" id="t5D-CI-3X6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dej-aW-c3B" firstAttribute="width" secondItem="ZKp-2K-mbz" secondAttribute="width" id="0IZ-aI-84G"/>
+                            <constraint firstItem="dej-aW-c3B" firstAttribute="height" secondItem="ZKp-2K-mbz" secondAttribute="height" id="Llv-ci-bez"/>
+                            <constraint firstItem="dej-aW-c3B" firstAttribute="centerY" secondItem="ZKp-2K-mbz" secondAttribute="centerY" id="PlA-Ru-Rmy"/>
+                            <constraint firstItem="dej-aW-c3B" firstAttribute="centerX" secondItem="ZKp-2K-mbz" secondAttribute="centerX" id="rwo-T3-kSp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3DT-RZ-OUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1979" y="1112"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,9 @@ class MGDAnimateLabel: UILabel, MGDAnimatable, MGDAnimationFade {
         if fadeIn {
             MGDAnimator.fadeIn(self, viewProgress: viewProgress)
         }
+        if fadeOut {
+            MGDAnimator.fadeOut(self, viewProgress: viewProgress)
+        }
     }
     
 }

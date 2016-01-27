@@ -32,4 +32,13 @@ class MGDAnimator {
         }
     }
     
+    static func fadeOut(item: UIView, viewProgress: CGFloat) {
+        if viewProgress >= 1.0 {
+            item.alpha = 0.0
+        }
+        else if viewProgress >= 0.0 {
+            item.alpha = 1.0 - viewProgress
+        }
+    }
+    
 }
