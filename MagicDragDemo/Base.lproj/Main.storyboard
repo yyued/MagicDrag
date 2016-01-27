@@ -63,7 +63,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="stream"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -98,12 +98,52 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbK-Gs-nJh" customClass="DemoLayer" customModule="MagicDrag" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.20392156859999999" green="0.83921568629999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDN-S4-eyl" customClass="MGDAnimationView" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.83921568629999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GDN-S4-eyl" firstAttribute="height" secondItem="qbK-Gs-nJh" secondAttribute="height" id="6Lr-9H-12b"/>
+                                    <constraint firstItem="GDN-S4-eyl" firstAttribute="centerX" secondItem="qbK-Gs-nJh" secondAttribute="centerX" id="EIh-Yh-VWM"/>
+                                    <constraint firstItem="GDN-S4-eyl" firstAttribute="width" secondItem="qbK-Gs-nJh" secondAttribute="width" id="nse-X3-QMq"/>
+                                    <constraint firstItem="GDN-S4-eyl" firstAttribute="centerY" secondItem="qbK-Gs-nJh" secondAttribute="centerY" id="v90-tw-iWu"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btc-80-ELX" customClass="Demo2Layer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdJ-24-ZFj" customClass="MGDAnimationLabel" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="279" y="170" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" id="g4b-bo-bvn"/>
+                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="-120" id="veu-wr-DnK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -112,7 +152,11 @@
                             <constraint firstItem="qbK-Gs-nJh" firstAttribute="width" secondItem="oOp-e0-fPi" secondAttribute="width" id="6jb-4N-uqZ"/>
                             <constraint firstItem="qbK-Gs-nJh" firstAttribute="centerY" secondItem="oOp-e0-fPi" secondAttribute="centerY" id="7GU-SV-bj6"/>
                             <constraint firstItem="qbK-Gs-nJh" firstAttribute="height" secondItem="oOp-e0-fPi" secondAttribute="height" id="Bn0-wi-hqS"/>
+                            <constraint firstItem="Btc-80-ELX" firstAttribute="centerX" secondItem="oOp-e0-fPi" secondAttribute="centerX" id="POu-hm-rg1"/>
+                            <constraint firstItem="Btc-80-ELX" firstAttribute="centerY" secondItem="oOp-e0-fPi" secondAttribute="centerY" id="W32-LG-ZUp"/>
+                            <constraint firstItem="Btc-80-ELX" firstAttribute="width" secondItem="oOp-e0-fPi" secondAttribute="width" id="W5v-oV-VQs"/>
                             <constraint firstItem="qbK-Gs-nJh" firstAttribute="centerX" secondItem="oOp-e0-fPi" secondAttribute="centerX" id="e0b-PD-nMc"/>
+                            <constraint firstItem="Btc-80-ELX" firstAttribute="height" secondItem="oOp-e0-fPi" secondAttribute="height" id="vLD-xU-KiN"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -17,6 +17,7 @@
 		6399BD181C585C5400AEAA06 /* MGDSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD171C585C5400AEAA06 /* MGDSceneViewController.swift */; };
 		6399BD1A1C585C9500AEAA06 /* MGDSceneLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD191C585C9500AEAA06 /* MGDSceneLayer.swift */; };
 		6399BD1C1C5894F000AEAA06 /* MGDPageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD1B1C5894F000AEAA06 /* MGDPageLayer.swift */; };
+		6399BD1E1C58BDF400AEAA06 /* MGDAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD1D1C58BDF400AEAA06 /* MGDAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		6399BD171C585C5400AEAA06 /* MGDSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDSceneViewController.swift; sourceTree = "<group>"; };
 		6399BD191C585C9500AEAA06 /* MGDSceneLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDSceneLayer.swift; sourceTree = "<group>"; };
 		6399BD1B1C5894F000AEAA06 /* MGDPageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDPageLayer.swift; sourceTree = "<group>"; };
+		6399BD1D1C58BDF400AEAA06 /* MGDAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				6399BD1B1C5894F000AEAA06 /* MGDPageLayer.swift */,
 				6399BD171C585C5400AEAA06 /* MGDSceneViewController.swift */,
 				6399BD191C585C9500AEAA06 /* MGDSceneLayer.swift */,
+				6399BD1D1C58BDF400AEAA06 /* MGDAnimations.swift */,
 			);
 			path = MagicDrag;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				6399BD181C585C5400AEAA06 /* MGDSceneViewController.swift in Sources */,
 				6399BD141C585BEE00AEAA06 /* ViewController.swift in Sources */,
 				6399BD1C1C5894F000AEAA06 /* MGDPageLayer.swift in Sources */,
+				6399BD1E1C58BDF400AEAA06 /* MGDAnimations.swift in Sources */,
 				6399BD0F1C585BEE00AEAA06 /* AppDelegate.swift in Sources */,
 				6399BD161C585C1900AEAA06 /* MGDPageViewController.swift in Sources */,
 			);

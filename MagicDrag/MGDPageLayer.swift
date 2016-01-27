@@ -146,7 +146,6 @@ class MGDFixPageLayer: MGDPageLayer {
     }
     
     override func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
-        sceneLayer.hidden = atPage != 0
         sceneLayer.frame = CGRect(
             x: 0,
             y: 0,
@@ -160,17 +159,6 @@ class MGDFixPageLayer: MGDPageLayer {
     }
     
     override func scrolling(contentOffsetX: CGFloat) {
-        let currentPage = Int(contentOffsetX / UIScreen.mainScreen().bounds.size.width)
-        let lastPage = currentPage - 1
-        let nextPage = currentPage + 1
-        for (idx, sceneLayer) in sceneLayerMap {
-            if idx != currentPage && idx != lastPage && idx != nextPage {
-                sceneLayer.hidden = true
-            }
-            else {
-                sceneLayer.hidden = false
-            }
-        }
         super.scrolling(contentOffsetX)
     }
     

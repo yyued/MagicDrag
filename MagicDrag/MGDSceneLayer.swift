@@ -30,6 +30,15 @@ class MGDSceneLayer: UIView {
      */
     var layerAtPage: Int = 0
     
+    override func willMoveToSuperview(newSuperview: UIView?) {
+        super.willMoveToSuperview(newSuperview)
+        for subview in self.subviews {
+            if let subview = subview as? MGDAnimatable {
+                subview.layerAnimation(-1.0)
+            }
+        }
+    }
+    
     /**
      * 用于页面推进的同时，图层对应控件相应的变化。
      * viewProgress = [-1,1]
@@ -39,7 +48,11 @@ class MGDSceneLayer: UIView {
      * (0,1]  B -> C
      */
     func layerAnimation(viewProgress: CGFloat) {
-        
+        for subview in self.subviews {
+            if let subview = subview as? MGDAnimatable {
+                subview.layerAnimation(viewProgress)
+            }
+        }
     }
 
 }
