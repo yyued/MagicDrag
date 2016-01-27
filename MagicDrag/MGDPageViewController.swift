@@ -49,12 +49,7 @@ class MGDPageViewController: UIViewController {
                 width: UIScreen.mainScreen().bounds.size.width * CGFloat(viewControllers.count),
                 height: UIScreen.mainScreen().bounds.size.height
             )
-            if pageLayer is MGDStreamPageLayer {
-                scrollView.addSubview(pageLayer)
-            }
-            else {
-                self.view.addSubview(pageLayer)
-            }
+            self.view.addSubview(pageLayer)
         }
         scrollView.contentSize = CGSize(
             width: UIScreen.mainScreen().bounds.size.width * CGFloat(viewControllers.count),
@@ -78,14 +73,14 @@ extension MGDPageViewController {
     func buildPageLayers() -> [MGDPageLayer] {
         let pageLayers: [Int: MGDPageLayer] = {
             var tmpPageLayers: [Int: MGDPageLayer] = [:]
-            for (idx, viewController) in self.viewControllers.enumerate() {
+            for (pageIndex, viewController) in self.viewControllers.enumerate() {
                 for sceneLayer in viewController.layers {
-                    if let pageLayer = tmpPageLayers[idx] {
-                        pageLayer.addSceneLayer(sceneLayer, atPage: idx)
+                    if let pageLayer = tmpPageLayers[sceneLayer.layerIndex] {
+                        pageLayer.addSceneLayer(sceneLayer, atPage: pageIndex)
                     }
                     else if let pageLayer = MGDPageLayer.newLayer(sceneLayer.layerStyle) {
-                        tmpPageLayers[idx] = pageLayer
-                        pageLayer.addSceneLayer(sceneLayer, atPage: idx)
+                        tmpPageLayers[sceneLayer.layerIndex] = pageLayer
+                        pageLayer.addSceneLayer(sceneLayer, atPage: pageIndex)
                     }
                 }
             }

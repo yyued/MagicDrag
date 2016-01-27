@@ -36,6 +36,16 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2D4-8r-9H5" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.97254901959999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaE-rM-aAb" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3J-xO-8M9">
                                         <rect key="frame" x="279" y="290" width="42" height="21"/>
@@ -44,13 +54,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.88235294119999996" green="0.97254901959999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerX" secondItem="2D4-8r-9H5" secondAttribute="centerX" id="aO8-Gs-rMx"/>
-                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerY" secondItem="2D4-8r-9H5" secondAttribute="centerY" id="eLY-yC-KAn"/>
+                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerX" secondItem="iaE-rM-aAb" secondAttribute="centerX" id="4bM-CN-aJE"/>
+                                    <constraint firstItem="f3J-xO-8M9" firstAttribute="centerY" secondItem="iaE-rM-aAb" secondAttribute="centerY" id="epV-uK-gUh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="stream"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -58,7 +71,11 @@
                         <constraints>
                             <constraint firstItem="2D4-8r-9H5" firstAttribute="centerY" secondItem="Myy-XK-pVV" secondAttribute="centerY" id="ENw-gB-bJo"/>
                             <constraint firstItem="2D4-8r-9H5" firstAttribute="width" secondItem="Myy-XK-pVV" secondAttribute="width" id="Glv-lj-l2u"/>
+                            <constraint firstItem="iaE-rM-aAb" firstAttribute="centerY" secondItem="Myy-XK-pVV" secondAttribute="centerY" id="RVQ-f9-QKF"/>
                             <constraint firstItem="2D4-8r-9H5" firstAttribute="centerX" secondItem="Myy-XK-pVV" secondAttribute="centerX" id="W0M-01-44V"/>
+                            <constraint firstItem="iaE-rM-aAb" firstAttribute="centerX" secondItem="Myy-XK-pVV" secondAttribute="centerX" id="hTc-KR-1YV"/>
+                            <constraint firstItem="iaE-rM-aAb" firstAttribute="width" secondItem="Myy-XK-pVV" secondAttribute="width" id="lE6-Tk-C74"/>
+                            <constraint firstItem="iaE-rM-aAb" firstAttribute="height" secondItem="Myy-XK-pVV" secondAttribute="height" id="rqh-lc-NaL"/>
                             <constraint firstItem="2D4-8r-9H5" firstAttribute="height" secondItem="Myy-XK-pVV" secondAttribute="height" id="vxC-4k-KoV"/>
                         </constraints>
                     </view>
@@ -84,6 +101,9 @@
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.83921568629999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>

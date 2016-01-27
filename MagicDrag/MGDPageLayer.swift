@@ -60,6 +60,15 @@ class MGDPageLayer: UIView {
 
 class MGDStreamPageLayer: MGDPageLayer {
     
+    override init() {
+        super.init()
+        self.userInteractionEnabled = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
         sceneLayer.frame = CGRect(
             x: UIScreen.mainScreen().bounds.size.width * CGFloat(atPage),
@@ -71,6 +80,14 @@ class MGDStreamPageLayer: MGDPageLayer {
         sceneLayer.autoresizingMask = []
         addSubview(sceneLayer)
         super.addSceneLayer(sceneLayer, atPage: atPage)
+    }
+    
+    override func scrolling(contentOffsetX: CGFloat) {
+        self.frame = {
+            var frame = self.frame
+            frame.origin.x = -contentOffsetX
+            return frame
+            }()
     }
     
 }
