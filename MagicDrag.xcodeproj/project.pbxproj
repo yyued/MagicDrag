@@ -13,11 +13,14 @@
 		6399BD121C585BEE00AEAA06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6399BD0B1C585BEE00AEAA06 /* Main.storyboard */; };
 		6399BD131C585BEE00AEAA06 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6399BD0D1C585BEE00AEAA06 /* Info.plist */; };
 		6399BD141C585BEE00AEAA06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD0E1C585BEE00AEAA06 /* ViewController.swift */; };
-		6399BD261C58CA4400AEAA06 /* MGDAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD201C58CA4400AEAA06 /* MGDAnimations.swift */; };
 		6399BD271C58CA4400AEAA06 /* MGDPageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD221C58CA4400AEAA06 /* MGDPageLayer.swift */; };
 		6399BD281C58CA4400AEAA06 /* MGDPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD231C58CA4400AEAA06 /* MGDPageViewController.swift */; };
 		6399BD291C58CA4400AEAA06 /* MGDSceneLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD241C58CA4400AEAA06 /* MGDSceneLayer.swift */; };
 		6399BD2A1C58CA4400AEAA06 /* MGDSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD251C58CA4400AEAA06 /* MGDSceneViewController.swift */; };
+		6399BD2C1C58CAEE00AEAA06 /* MGDAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD2B1C58CAEE00AEAA06 /* MGDAnimator.swift */; };
+		6399BD2E1C58CB3B00AEAA06 /* MGDAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */; };
+		6399BD301C58CB6800AEAA06 /* MGDAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */; };
+		6399BD321C58CB8500AEAA06 /* MGDAnimateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +31,14 @@
 		6399BD0C1C585BEE00AEAA06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6399BD0D1C585BEE00AEAA06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6399BD0E1C585BEE00AEAA06 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6399BD201C58CA4400AEAA06 /* MGDAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimations.swift; sourceTree = "<group>"; };
 		6399BD221C58CA4400AEAA06 /* MGDPageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDPageLayer.swift; sourceTree = "<group>"; };
 		6399BD231C58CA4400AEAA06 /* MGDPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDPageViewController.swift; sourceTree = "<group>"; };
 		6399BD241C58CA4400AEAA06 /* MGDSceneLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDSceneLayer.swift; sourceTree = "<group>"; };
 		6399BD251C58CA4400AEAA06 /* MGDSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDSceneViewController.swift; sourceTree = "<group>"; };
+		6399BD2B1C58CAEE00AEAA06 /* MGDAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimator.swift; sourceTree = "<group>"; };
+		6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateView.swift; sourceTree = "<group>"; };
+		6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateLabel.swift; sourceTree = "<group>"; };
+		6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +94,10 @@
 		6399BD1F1C58CA4400AEAA06 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
-				6399BD201C58CA4400AEAA06 /* MGDAnimations.swift */,
+				6399BD2B1C58CAEE00AEAA06 /* MGDAnimator.swift */,
+				6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */,
+				6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */,
+				6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -176,13 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6399BD261C58CA4400AEAA06 /* MGDAnimations.swift in Sources */,
+				6399BD321C58CB8500AEAA06 /* MGDAnimateImageView.swift in Sources */,
 				6399BD141C585BEE00AEAA06 /* ViewController.swift in Sources */,
 				6399BD0F1C585BEE00AEAA06 /* AppDelegate.swift in Sources */,
 				6399BD271C58CA4400AEAA06 /* MGDPageLayer.swift in Sources */,
+				6399BD2E1C58CB3B00AEAA06 /* MGDAnimateView.swift in Sources */,
+				6399BD301C58CB6800AEAA06 /* MGDAnimateLabel.swift in Sources */,
 				6399BD2A1C58CA4400AEAA06 /* MGDSceneViewController.swift in Sources */,
 				6399BD281C58CA4400AEAA06 /* MGDPageViewController.swift in Sources */,
 				6399BD291C58CA4400AEAA06 /* MGDSceneLayer.swift in Sources */,
+				6399BD2C1C58CAEE00AEAA06 /* MGDAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
