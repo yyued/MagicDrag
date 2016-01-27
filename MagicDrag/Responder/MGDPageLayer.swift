@@ -88,6 +88,7 @@ class MGDStreamPageLayer: MGDPageLayer {
             frame.origin.x = -contentOffsetX
             return frame
             }()
+        super.scrolling(contentOffsetX)
     }
     
 }

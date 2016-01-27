@@ -34,6 +34,16 @@ class MGDPageViewController: UIViewController {
         super.viewDidLoad()
         self.configureScrollView()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollView.setContentOffset(CGPoint(x: -UIScreen.mainScreen().bounds.size.width, y: 0.0), animated: false)
+        UIView.animateWithDuration(0.50, delay: 0.15, usingSpringWithDamping: 10.0, initialSpringVelocity: 15.0, options: [], animations: { () -> Void in
+            self.scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: false)
+            }) { (_) -> Void in
+                self.scrollView.setContentOffset(CGPoint(x: 0.0, y: 0.0), animated: false)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
