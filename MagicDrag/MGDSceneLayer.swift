@@ -24,5 +24,10 @@ class MGDSceneLayer: UIView {
      * fix    固定在首屏
      */
     @IBInspectable var layerStyle: String = "stream" // stream/push/fix
+    
+    /**
+     * Private
+     */
+    var layerAtPage: Int = 0
 
 }

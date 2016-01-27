@@ -13,6 +13,10 @@ class MGDPageViewController: UIViewController {
     var viewControllers: [MGDSceneViewController] = []
     let scrollView = UIScrollView()
     
+    deinit {
+        scrollView.delegate = nil
+    }
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -45,7 +49,12 @@ class MGDPageViewController: UIViewController {
                 width: UIScreen.mainScreen().bounds.size.width * CGFloat(viewControllers.count),
                 height: UIScreen.mainScreen().bounds.size.height
             )
-            scrollView.addSubview(pageLayer)
+            if pageLayer is MGDStreamPageLayer {
+                scrollView.addSubview(pageLayer)
+            }
+            else {
+                self.view.addSubview(pageLayer)
+            }
         }
         scrollView.contentSize = CGSize(
             width: UIScreen.mainScreen().bounds.size.width * CGFloat(viewControllers.count),
@@ -54,6 +63,7 @@ class MGDPageViewController: UIViewController {
         scrollView.pagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
+        scrollView.delegate = self
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -64,15 +74,15 @@ class MGDPageViewController: UIViewController {
 
 extension MGDPageViewController {
     
-    func buildPageLayers() -> [PageLayer] {
-        let pageLayers: [Int: PageLayer] = {
-            var tmpPageLayers: [Int: PageLayer] = [:]
+    func buildPageLayers() -> [MGDPageLayer] {
+        let pageLayers: [Int: MGDPageLayer] = {
+            var tmpPageLayers: [Int: MGDPageLayer] = [:]
             for (idx, viewController) in self.viewControllers.enumerate() {
                 for sceneLayer in viewController.layers {
                     if let pageLayer = tmpPageLayers[idx] {
                         pageLayer.addSceneLayer(sceneLayer, atPage: idx)
                     }
-                    else if let pageLayer = PageLayer.newLayer(sceneLayer.layerStyle) {
+                    else if let pageLayer = MGDPageLayer.newLayer(sceneLayer.layerStyle) {
                         tmpPageLayers[idx] = pageLayer
                         pageLayer.addSceneLayer(sceneLayer, atPage: idx)
                     }
@@ -81,7 +91,7 @@ extension MGDPageViewController {
             return tmpPageLayers
         }()
         return {
-            var tmpLayers: [PageLayer] = []
+            var tmpLayers: [MGDPageLayer] = []
             let allKeys = pageLayers.keys.sort {
                 $0 < $1
             }
@@ -94,63 +104,19 @@ extension MGDPageViewController {
     
 }
 
-extension MGDPageViewController {
+extension MGDPageViewController: UIScrollViewDelegate {
     
-    class PageLayer: UIView {
-        
-        init() {
-            super.init(frame: CGRect.zero)
-            self.translatesAutoresizingMaskIntoConstraints = true
-            self.autoresizingMask = []
-            self.backgroundColor = UIColor.clearColor()
-        }
-
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        static func newLayer(style: String) -> PageLayer? {
-            if style == "stream" {
-                return StreamPageLayer()
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        for view in scrollView.subviews {
+            if let view = view as? MGDPageLayer {
+                view.scrolling(scrollView.contentOffset.x)
             }
-            else if style == "push" {
-                return PushPageLayer()
+        }
+        for view in self.view.subviews {
+            if let view = view as? MGDPageLayer {
+                view.scrolling(scrollView.contentOffset.x)
             }
-            else if style == "fix" {
-                return FixPageLayer()
-            }
-            return nil
         }
-        
-        func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
-            
-        }
-        
-    }
-    
-    class StreamPageLayer: PageLayer {
-        
-        override func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
-            sceneLayer.frame = CGRect(
-                x: UIScreen.mainScreen().bounds.size.width * CGFloat(atPage),
-                y: 0,
-                width: UIScreen.mainScreen().bounds.size.width,
-                height: UIScreen.mainScreen().bounds.size.height
-            )
-            sceneLayer.translatesAutoresizingMaskIntoConstraints = true
-            sceneLayer.autoresizingMask = []
-            addSubview(sceneLayer)
-            super.addSceneLayer(sceneLayer, atPage: atPage)
-        }
-        
-    }
-    
-    class PushPageLayer: PageLayer {
-        
-    }
-    
-    class FixPageLayer: PageLayer {
-        
     }
     
 }

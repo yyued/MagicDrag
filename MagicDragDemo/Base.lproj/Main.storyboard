@@ -49,6 +49,9 @@
                                     <constraint firstItem="f3J-xO-8M9" firstAttribute="centerX" secondItem="2D4-8r-9H5" secondAttribute="centerX" id="aO8-Gs-rMx"/>
                                     <constraint firstItem="f3J-xO-8M9" firstAttribute="centerY" secondItem="2D4-8r-9H5" secondAttribute="centerY" id="eLY-yC-KAn"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="push"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,6 +82,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbK-Gs-nJh" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.83921568629999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="push"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
