@@ -64,6 +64,7 @@ class MGDPageViewController: UIViewController {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
+        scrollView.bounces = false
     }
     
     override func prefersStatusBarHidden() -> Bool {

@@ -31,3 +31,18 @@ class ViewController: UIViewController {
 
 }
 
+class DemoLayer: MGDSceneLayer {
+    
+    override func willMoveToSuperview(newSuperview: UIView?) {
+        super.willMoveToSuperview(newSuperview)
+        self.alpha = 0.0
+    }
+    
+    override func layerAnimation(viewProgress: CGFloat) {
+        if viewProgress <= 0.0 {
+            self.alpha = 1.0 + viewProgress
+        }
+    }
+    
+}
+

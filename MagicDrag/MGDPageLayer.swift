@@ -10,6 +10,8 @@ import UIKit
 
 class MGDPageLayer: UIView {
     
+    var sceneLayerMap: [Int: MGDSceneLayer] = [:]
+    
     init() {
         super.init(frame: CGRect.zero)
         self.translatesAutoresizingMaskIntoConstraints = true
@@ -36,10 +38,22 @@ class MGDPageLayer: UIView {
     
     func addSceneLayer(sceneLayer: MGDSceneLayer, atPage: Int) {
         sceneLayer.layerAtPage = atPage
+        sceneLayerMap[atPage] = sceneLayer
     }
     
     func scrolling(contentOffsetX: CGFloat) {
-        
+        let currentPage = Int(contentOffsetX / UIScreen.mainScreen().bounds.size.width)
+        let lastPage = currentPage - 1
+        let nextPage = currentPage + 1
+        if let sceneLayer = sceneLayerMap[lastPage] {
+            sceneLayer.layerAnimation(1.0)
+        }
+        if let sceneLayer = sceneLayerMap[currentPage] {
+            sceneLayer.layerAnimation((contentOffsetX % UIScreen.mainScreen().bounds.size.width) / UIScreen.mainScreen().bounds.size.width)
+        }
+        if let sceneLayer = sceneLayerMap[nextPage] {
+            sceneLayer.layerAnimation((contentOffsetX % UIScreen.mainScreen().bounds.size.width) / UIScreen.mainScreen().bounds.size.width - 1.0)
+        }
     }
     
 }
@@ -63,8 +77,6 @@ class MGDStreamPageLayer: MGDPageLayer {
 
 class MGDPushPageLayer: MGDPageLayer {
     
-    var sceneLayerMap: [Int: MGDSceneLayer] = [:]
-    
     override init() {
         super.init()
         self.userInteractionEnabled = false
@@ -85,7 +97,6 @@ class MGDPushPageLayer: MGDPageLayer {
         sceneLayer.autoresizingMask = []
         addSubview(sceneLayer)
         super.addSceneLayer(sceneLayer, atPage: atPage)
-        sceneLayerMap[atPage] = sceneLayer
     }
     
     override func scrolling(contentOffsetX: CGFloat) {

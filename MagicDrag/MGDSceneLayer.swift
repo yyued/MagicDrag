@@ -29,5 +29,17 @@ class MGDSceneLayer: UIView {
      * Private
      */
     var layerAtPage: Int = 0
+    
+    /**
+     * 用于页面推进的同时，图层对应控件相应的变化。
+     * viewProgress = [-1,1]
+     * 例如本页是 B
+     * [-1,0) A -> B
+     * == 0   A - [B] - C
+     * (0,1]  B -> C
+     */
+    func layerAnimation(viewProgress: CGFloat) {
+        
+    }
 
 }
