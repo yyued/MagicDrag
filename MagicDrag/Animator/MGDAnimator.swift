@@ -23,6 +23,13 @@ protocol MGDAnimationFade {
     
 }
 
+protocol MGDAnimationMove {
+    
+    var moveIn: CGPoint { get set }
+    var moveOut: CGPoint { get set }
+    
+}
+
 class MGDAnimator {
     
     static func delayProgress(item: UIView, viewProgress: CGFloat) -> CGFloat? {
@@ -61,6 +68,60 @@ class MGDAnimator {
         }
         else if viewProgress >= 0.0 {
             item.alpha = 1.0 - viewProgress
+        }
+    }
+    
+    static func moveIn(item: UIView, from: CGPoint, viewProgress: CGFloat) {
+        if viewProgress <= -1.0 {
+            if from.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant! + from.x
+            }
+            if from.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant! + from.y
+            }
+        }
+        else if viewProgress < 0.0 {
+            if from.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant! - viewProgress * from.x
+            }
+            if from.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant! - viewProgress * from.y
+            }
+        }
+        else if viewProgress == 0.0 {
+            if from.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant!
+            }
+            if from.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant!
+            }
+        }
+    }
+    
+    static func moveOut(item: UIView, to: CGPoint, viewProgress: CGFloat) {
+        if viewProgress >= 1.0 {
+            if to.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant! + to.x
+            }
+            if to.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant! + to.y
+            }
+        }
+        else if viewProgress > 0.0 {
+            if to.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant! + viewProgress * to.x
+            }
+            if to.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant! + viewProgress * to.y
+            }
+        }
+        else if viewProgress == 0.0 {
+            if to.x != 0.0, let xConstraint = item.xConstraint {
+                xConstraint.constant = xConstraint.MGD_originConstant!
+            }
+            if to.y != 0.0, let yConstraint = item.yConstraint {
+                yConstraint.constant = yConstraint.MGD_originConstant!
+            }
         }
     }
     

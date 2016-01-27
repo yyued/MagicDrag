@@ -21,6 +21,7 @@
 		6399BD2E1C58CB3B00AEAA06 /* MGDAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */; };
 		6399BD301C58CB6800AEAA06 /* MGDAnimateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */; };
 		6399BD321C58CB8500AEAA06 /* MGDAnimateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */; };
+		F02649BB1C5919C500ACD8BC /* MGDLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateView.swift; sourceTree = "<group>"; };
 		6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateLabel.swift; sourceTree = "<group>"; };
 		6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDAnimateImageView.swift; sourceTree = "<group>"; };
+		F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				6399BD2D1C58CB3B00AEAA06 /* MGDAnimateView.swift */,
 				6399BD2F1C58CB6800AEAA06 /* MGDAnimateLabel.swift */,
 				6399BD311C58CB8500AEAA06 /* MGDAnimateImageView.swift */,
+				F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02649BB1C5919C500ACD8BC /* MGDLayoutConstraint.swift in Sources */,
 				6399BD321C58CB8500AEAA06 /* MGDAnimateImageView.swift in Sources */,
 				6399BD141C585BEE00AEAA06 /* ViewController.swift in Sources */,
 				6399BD0F1C585BEE00AEAA06 /* AppDelegate.swift in Sources */,
@@ -342,6 +346,7 @@
 				6399BD041C585BCD00AEAA06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

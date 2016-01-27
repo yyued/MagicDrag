@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -135,6 +135,12 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveIn">
+                                                <point key="value" x="50" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveOut">
+                                                <point key="value" x="-70" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsk-s2-MZK" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
@@ -148,6 +154,12 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveIn">
+                                                <point key="value" x="60" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveOut">
+                                                <point key="value" x="-60" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDj-Wh-pO8" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
@@ -161,17 +173,25 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="fadeOut" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveIn">
+                                                <point key="value" x="70" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveOut">
+                                                <point key="value" x="-50" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="tDj-Wh-pO8" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" identifier="X" id="Jef-8r-CMn"/>
                                     <constraint firstItem="tDj-Wh-pO8" firstAttribute="centerX" secondItem="Bsk-s2-MZK" secondAttribute="centerX" id="Nrb-HM-Jt4"/>
+                                    <constraint firstItem="Bsk-s2-MZK" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" identifier="X" id="S4u-jd-wIY"/>
                                     <constraint firstItem="Bsk-s2-MZK" firstAttribute="top" secondItem="ZdJ-24-ZFj" secondAttribute="bottom" constant="14" id="Skf-yp-QqX"/>
                                     <constraint firstItem="tDj-Wh-pO8" firstAttribute="top" secondItem="Bsk-s2-MZK" secondAttribute="bottom" constant="14" id="ZeG-Ee-43t"/>
-                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" id="g4b-bo-bvn"/>
+                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" identifier="X" id="g4b-bo-bvn"/>
                                     <constraint firstItem="Bsk-s2-MZK" firstAttribute="centerX" secondItem="ZdJ-24-ZFj" secondAttribute="centerX" id="gvG-MQ-UhS"/>
-                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="-120" id="veu-wr-DnK"/>
+                                    <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="-120" identifier="Y" id="veu-wr-DnK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
@@ -179,6 +199,12 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gvG-MQ-UhS"/>
+                                        <exclude reference="Nrb-HM-Jt4"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
