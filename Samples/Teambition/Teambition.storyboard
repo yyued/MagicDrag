@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -85,7 +85,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjy-v3-cCq" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s1-big-ball" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-UW-91b" customClass="MGDAnimateImageView" customModule="MagicDrag" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s1-blue-ball" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-UW-91b" customClass="MGDAnimateImageView" customModule="MagicDrag" customModuleProvider="target">
                                         <rect key="frame" x="366" y="216" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="mHb-Nb-eG4"/>
@@ -94,6 +94,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="point" keyPath="zoomOut">
                                                 <point key="value" x="25" y="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveIn">
+                                                <point key="value" x="100" y="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -127,8 +130,8 @@
                                     <constraint firstItem="Cqb-Xf-005" firstAttribute="leading" secondItem="Cul-wZ-uVH" secondAttribute="trailing" constant="8" id="14b-5c-Wzc"/>
                                     <constraint firstItem="8SP-UW-91b" firstAttribute="centerY" secondItem="pjy-v3-cCq" secondAttribute="centerY" constant="-59" id="2eP-rn-C9h"/>
                                     <constraint firstItem="Ukt-4y-bD0" firstAttribute="centerY" secondItem="8SP-UW-91b" secondAttribute="centerY" id="Exr-wE-HFK"/>
-                                    <constraint firstItem="Cul-wZ-uVH" firstAttribute="centerX" secondItem="pjy-v3-cCq" secondAttribute="centerX" constant="-68" id="FHu-0v-9Sz"/>
-                                    <constraint firstItem="8SP-UW-91b" firstAttribute="centerX" secondItem="pjy-v3-cCq" secondAttribute="centerX" constant="91" id="GcC-H0-xQZ"/>
+                                    <constraint firstItem="Cul-wZ-uVH" firstAttribute="centerX" secondItem="pjy-v3-cCq" secondAttribute="centerX" constant="-68" identifier="X" id="FHu-0v-9Sz"/>
+                                    <constraint firstItem="8SP-UW-91b" firstAttribute="centerX" secondItem="pjy-v3-cCq" secondAttribute="centerX" constant="91" identifier="X" id="GcC-H0-xQZ"/>
                                     <constraint firstItem="Ukt-4y-bD0" firstAttribute="centerX" secondItem="8SP-UW-91b" secondAttribute="centerX" id="HIT-Sc-Qnn"/>
                                     <constraint firstItem="Cul-wZ-uVH" firstAttribute="centerY" secondItem="pjy-v3-cCq" secondAttribute="centerY" constant="-200" identifier="Y" id="neJ-Jk-PMG"/>
                                     <constraint firstItem="Cqb-Xf-005" firstAttribute="centerY" secondItem="Cul-wZ-uVH" secondAttribute="centerY" constant="-2" id="rGb-H3-Mo5"/>
@@ -795,6 +798,7 @@
     </scenes>
     <resources>
         <image name="s1-big-ball" width="676" height="676"/>
+        <image name="s1-blue-ball" width="57" height="57"/>
         <image name="s1-checkmark" width="30" height="26"/>
         <image name="s1-folder" width="267" height="142"/>
         <image name="s1-logo" width="114" height="18"/>
