@@ -133,7 +133,7 @@ extension MGDAnimator {
         }
         else if viewProgress <= 0.0 {
             let viewProgress = viewProgress + 1.0
-            return fromValue + (toValue - fromValue) * viewProgress
+            return fromValue + (toValue - fromValue) * viewProgress * viewProgress
         }
         else {
             return nil
@@ -145,7 +145,7 @@ extension MGDAnimator {
             return toValue
         }
         else if viewProgress >= 0.0 {
-            return fromValue + (toValue - fromValue) * viewProgress
+            return fromValue + (toValue - fromValue) * viewProgress * viewProgress
         }
         else {
             return nil

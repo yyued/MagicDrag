@@ -21,6 +21,12 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.presentViewController(TeambitionPageViewController(), animated: false, completion: nil)
+        return
+        
+        
+        
+        
         let vc = MGDPageViewController()
         vc.viewControllers = [
             UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_0") as! MGDSceneViewController,
