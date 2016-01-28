@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -181,6 +181,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8O3-0B-Gbr" customClass="MGDAnimateView" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="356" width="88" height="88"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" identifier="W" id="7Q3-kL-sfh"/>
+                                            <constraint firstAttribute="height" constant="88" identifier="H" id="Phj-cM-GfQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="44"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="zoomIn">
+                                                <point key="value" x="0.10000000000000001" y="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="zoomOut">
+                                                <point key="value" x="12" y="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -191,6 +211,8 @@
                                     <constraint firstItem="tDj-Wh-pO8" firstAttribute="top" secondItem="Bsk-s2-MZK" secondAttribute="bottom" constant="14" id="ZeG-Ee-43t"/>
                                     <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" identifier="X" id="g4b-bo-bvn"/>
                                     <constraint firstItem="Bsk-s2-MZK" firstAttribute="centerX" secondItem="ZdJ-24-ZFj" secondAttribute="centerX" id="gvG-MQ-UhS"/>
+                                    <constraint firstItem="8O3-0B-Gbr" firstAttribute="centerX" secondItem="Btc-80-ELX" secondAttribute="centerX" id="lhs-BT-rPw"/>
+                                    <constraint firstItem="8O3-0B-Gbr" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="100" id="mga-WF-yNy"/>
                                     <constraint firstItem="ZdJ-24-ZFj" firstAttribute="centerY" secondItem="Btc-80-ELX" secondAttribute="centerY" constant="-120" identifier="Y" id="veu-wr-DnK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
