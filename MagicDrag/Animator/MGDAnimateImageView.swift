@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MGDAnimateImageView: UIImageView, MGDAnimatable, MGDAnimationFade, MGDAnimationMove, MGDAnimationZoom {
+class MGDAnimateImageView: UIImageView, MGDTouchable, MGDAnimatable, MGDAnimationFade, MGDAnimationMove, MGDAnimationZoom {
+    
+    @IBInspectable var canTouch: Bool = false
     
     @IBInspectable var delaysOfAnimation: CGFloat = 0.0
     @IBInspectable var numbersOfPower: CGFloat = 3.0

@@ -12,6 +12,20 @@ class MGDPageLayer: UIView {
     
     var sceneLayerMap: [Int: MGDSceneLayer] = [:]
     
+    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        for sceneLayer in self.subviews {
+            for animateView in sceneLayer.subviews {
+                if let touchableView = animateView as? MGDTouchable where touchableView.canTouch {
+                    let innerPoint = animateView.convertPoint(point, fromView: sceneLayer)
+                    if animateView.alpha > 0.0 && animateView.pointInside(innerPoint, withEvent: event) {
+                        return animateView
+                    }
+                }
+            }
+        }
+        return nil
+    }
+    
     init() {
         super.init(frame: CGRect.zero)
         self.translatesAutoresizingMaskIntoConstraints = true
@@ -62,7 +76,6 @@ class MGDStreamPageLayer: MGDPageLayer {
     
     override init() {
         super.init()
-        self.userInteractionEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -97,7 +110,6 @@ class MGDPushPageLayer: MGDPageLayer {
     
     override init() {
         super.init()
-        self.userInteractionEnabled = false
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -139,7 +151,6 @@ class MGDFixPageLayer: MGDPageLayer {
     
     override init() {
         super.init()
-        self.userInteractionEnabled = false
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -1,15 +1,15 @@
 //
-//  MGDAnimateLabel.swift
+//  MGDAnimateButton.swift
 //  MagicDrag
 //
-//  Created by 崔 明辉 on 16/1/27.
+//  Created by 崔 明辉 on 16/1/29.
 //  Copyright © 2016年 swift. All rights reserved.
 //
 
 import UIKit
 
-class MGDAnimateLabel: UILabel, MGDTouchable, MGDAnimatable, MGDAnimationFade, MGDAnimationMove, MGDAnimationZoom {
-    
+class MGDAnimateButton: UIButton, MGDTouchable, MGDAnimatable, MGDAnimationFade, MGDAnimationMove, MGDAnimationZoom {
+
     @IBInspectable var canTouch: Bool = false
     
     @IBInspectable var delaysOfAnimation: CGFloat = 0.0
@@ -44,5 +44,5 @@ class MGDAnimateLabel: UILabel, MGDTouchable, MGDAnimatable, MGDAnimationFade, M
             MGDAnimator.zoomOut(self, to: zoomOut, viewProgress: viewProgress)
         }
     }
-    
+
 }

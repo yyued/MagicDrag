@@ -17,6 +17,12 @@ protocol MGDAnimatable {
     
 }
 
+protocol MGDTouchable {
+    
+    var canTouch: Bool { get set }
+    
+}
+
 protocol MGDAnimationFade {
     
     var fadeIn: Bool { get set }
