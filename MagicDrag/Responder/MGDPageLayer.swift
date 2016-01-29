@@ -150,6 +150,14 @@ class MGDPushPageLayer: MGDPageLayer {
                 return frame
                 }()
         }
+        let nextPage = controlPage + 1
+        if let sceneLayer = sceneLayerMap[nextPage] {
+            sceneLayer.frame = {
+                var frame = sceneLayer.frame
+                frame.origin.x = UIScreen.mainScreen().bounds.size.width
+                return frame
+                }()
+        }
         super.scrolling(contentOffsetX)
     }
     
