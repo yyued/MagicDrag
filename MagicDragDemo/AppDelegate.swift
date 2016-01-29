@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        application.applicationSupportsShakeToEdit = true
+        self.becomeFirstResponder()
         return true
     }
 
@@ -40,7 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    override func motionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        super.motionBegan(motion, withEvent: event)
+        UIApplication.sharedApplication().keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
+    
+    override func motionCancelled(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        super.motionCancelled(motion, withEvent: event)
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        super.motionEnded(motion, withEvent: event)
+    }
 
 }
 

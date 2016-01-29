@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-//        self.presentViewController(TeambitionPageViewController(), animated: false, completion: nil)
         self.presentViewController( UIStoryboard(name: "SimpleStart", bundle: nil).instantiateInitialViewController()!,
             animated: false, completion: nil)
     }
