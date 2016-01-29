@@ -10,6 +10,8 @@ That's MagicDrag. No need to write much code, to create an unbelievable animatin
 
 ## Preview
 
+![Teambition](https://raw.githubusercontent.com/yyued/MagicDrag/master/Readme/preview_teambition.gif)
+
 ## How to works ?
 
 MagicDrag use a scrollView which it's invisible. The scrollView content moves while user touch screen. We observes the scrollView delegate and deliver the contentOffset to Layers.
