@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Scene View Controller-->
+        <scene sceneID="FN4-13-vYa">
+            <objects>
+                <viewController storyboardIdentifier="Scene_0" id="IgE-Qh-cQY" customClass="MGDSceneViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7e5-GP-DFJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Doo-wu-bcW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Oj-AO-H14">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaz-GL-4kd" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPl-RK-thW" customClass="MGDAnimateView" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="256" width="88" height="88"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.58823529409999997" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" identifier="H" id="fJo-KJ-R6Z"/>
+                                            <constraint firstAttribute="width" constant="88" identifier="W" id="uQB-Ag-5bu"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="44"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="zoomIn">
+                                                <point key="value" x="0.5" y="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="zoomOut">
+                                                <point key="value" x="10" y="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NPl-RK-thW" firstAttribute="centerY" secondItem="eaz-GL-4kd" secondAttribute="centerY" identifier="Y" id="4JW-05-Lcm"/>
+                                    <constraint firstItem="NPl-RK-thW" firstAttribute="centerX" secondItem="eaz-GL-4kd" secondAttribute="centerX" identifier="X" id="kFx-Os-xwr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eaz-GL-4kd" firstAttribute="width" secondItem="4Oj-AO-H14" secondAttribute="width" id="Mf3-12-8VA"/>
+                            <constraint firstItem="eaz-GL-4kd" firstAttribute="centerX" secondItem="4Oj-AO-H14" secondAttribute="centerX" id="WHK-vH-KvR"/>
+                            <constraint firstItem="eaz-GL-4kd" firstAttribute="height" secondItem="4Oj-AO-H14" secondAttribute="height" id="bVs-KR-8LP"/>
+                            <constraint firstItem="eaz-GL-4kd" firstAttribute="centerY" secondItem="4Oj-AO-H14" secondAttribute="centerY" id="iXS-9G-ljt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rr4-HX-fvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="129"/>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="c3J-fH-Dp7">
+            <objects>
+                <viewController storyboardIdentifier="Scene_1" id="2MT-Wo-wOj" customClass="MGDSceneViewController" customModule="MagicDrag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gyi-99-eQ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="c8G-0j-p8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Do7-cf-Lmt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJm-1n-ce1" customClass="MGDSceneLayer" customModule="MagicDrag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyR-cX-bJn" customClass="MGDAnimateView" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.58823529409999997" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delaysOfAnimation">
+                                                <real key="value" value="0.99990000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direct by Pony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVd-hc-b42" customClass="MGDAnimateLabel" customModule="MagicDrag" customModuleProvider="target">
+                                        <rect key="frame" x="232" y="287" width="136" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="fadeIn" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="zoomIn">
+                                                <point key="value" x="0.5" y="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="moveIn">
+                                                <point key="value" x="0.0" y="44"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="DyR-cX-bJn" firstAttribute="centerX" secondItem="ZJm-1n-ce1" secondAttribute="centerX" id="11K-hp-eD1"/>
+                                    <constraint firstItem="PVd-hc-b42" firstAttribute="centerX" secondItem="ZJm-1n-ce1" secondAttribute="centerX" id="89E-U3-jKG"/>
+                                    <constraint firstItem="PVd-hc-b42" firstAttribute="centerY" secondItem="ZJm-1n-ce1" secondAttribute="centerY" identifier="Y" id="IUF-5f-BSX"/>
+                                    <constraint firstItem="DyR-cX-bJn" firstAttribute="height" secondItem="ZJm-1n-ce1" secondAttribute="height" id="Ij9-Rb-Kb8"/>
+                                    <constraint firstItem="DyR-cX-bJn" firstAttribute="width" secondItem="ZJm-1n-ce1" secondAttribute="width" id="M4D-5c-fNC"/>
+                                    <constraint firstItem="DyR-cX-bJn" firstAttribute="centerY" secondItem="ZJm-1n-ce1" secondAttribute="centerY" id="m42-C5-t1R"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layerStyle" value="fix"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerIndex">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZJm-1n-ce1" firstAttribute="centerY" secondItem="Do7-cf-Lmt" secondAttribute="centerY" id="2NB-9c-Vsr"/>
+                            <constraint firstItem="ZJm-1n-ce1" firstAttribute="width" secondItem="Do7-cf-Lmt" secondAttribute="width" id="CEI-l3-kV7"/>
+                            <constraint firstItem="ZJm-1n-ce1" firstAttribute="centerX" secondItem="Do7-cf-Lmt" secondAttribute="centerX" id="HKy-Bu-JgF"/>
+                            <constraint firstItem="ZJm-1n-ce1" firstAttribute="height" secondItem="Do7-cf-Lmt" secondAttribute="height" id="z7t-B8-hov"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcE-9o-HAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="129"/>
+        </scene>
+    </scenes>
+</document>

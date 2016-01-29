@@ -30,6 +30,7 @@
 		63AEF1F41C5B062800687A9C /* SimpleStart_StreamLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */; };
 		63AEF1F61C5B06A500687A9C /* SimpleStart_PushLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */; };
 		63AEF1F81C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */; };
+		63AEF1FA1C5B07C600687A9C /* SimpleStart_AnimatedBall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F91C5B07C600687A9C /* SimpleStart_AnimatedBall.storyboard */; };
 		F02649BB1C5919C500ACD8BC /* MGDLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_StreamLayer.storyboard; sourceTree = "<group>"; };
 		63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_PushLayer.storyboard; sourceTree = "<group>"; };
 		63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_FixLayer.storyboard; sourceTree = "<group>"; };
+		63AEF1F91C5B07C600687A9C /* SimpleStart_AnimatedBall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_AnimatedBall.storyboard; sourceTree = "<group>"; };
 		F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */,
 				63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */,
 				63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */,
+				63AEF1F91C5B07C600687A9C /* SimpleStart_AnimatedBall.storyboard */,
 			);
 			path = "Simple Start";
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				63AEF1F81C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard in Resources */,
 				63AEF1EE1C5AFE8900687A9C /* SimpleStart.storyboard in Resources */,
 				6399BD101C585BEE00AEAA06 /* Assets.xcassets in Resources */,
+				63AEF1FA1C5B07C600687A9C /* SimpleStart_AnimatedBall.storyboard in Resources */,
 				63AEF1E71C5A0C4F00687A9C /* Teambition.storyboard in Resources */,
 				63AEF1F61C5B06A500687A9C /* SimpleStart_PushLayer.storyboard in Resources */,
 				63AEF1F41C5B062800687A9C /* SimpleStart_StreamLayer.storyboard in Resources */,

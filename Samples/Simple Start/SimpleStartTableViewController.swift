@@ -54,6 +54,18 @@ class SimpleStartTableViewController: UITableViewController {
                 self.presentViewController(pageViewController, animated: false, completion: nil)
             }
         }
+        else if indexPath.row == 3 {
+            let storyBoard = UIStoryboard(name: "SimpleStart_AnimatedBall", bundle: nil)
+            let viewControllers = [
+                storyBoard.instantiateViewControllerWithIdentifier("Scene_0"),
+                storyBoard.instantiateViewControllerWithIdentifier("Scene_1"),
+            ]
+            if let viewControllers = viewControllers as? [MGDSceneViewController] {
+                let pageViewController = SimpleStartPageViewController()
+                pageViewController.viewControllers = viewControllers
+                self.presentViewController(pageViewController, animated: false, completion: nil)
+            }
+        }
     }
 
 }
