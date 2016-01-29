@@ -11,6 +11,7 @@ import UIKit
 class MGDAnimateLabel: UILabel, MGDAnimatable, MGDAnimationFade, MGDAnimationMove, MGDAnimationZoom {
     
     @IBInspectable var delaysOfAnimation: CGFloat = 0.0
+    @IBInspectable var numbersOfPower: CGFloat = 3.0
     
     @IBInspectable var fadeIn: Bool = false
     @IBInspectable var fadeOut: Bool = false

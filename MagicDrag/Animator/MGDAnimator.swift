@@ -11,6 +11,7 @@ import UIKit
 protocol MGDAnimatable {
     
     var delaysOfAnimation: CGFloat { get set }
+    var numbersOfPower: CGFloat { get set }
     
     func layerAnimation(viewProgress: CGFloat)
     
@@ -41,27 +42,36 @@ class MGDAnimator {
     
     static func fadeIn(item: UIView, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
-        if let alpha = self.inValue(0.0, toValue: 1.0, viewProgress: calculatedProgress) {
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
+        if let alpha = self.inValue(0.0, toValue: 1.0, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
             item.alpha = alpha
         }
     }
     
     static func fadeOut(item: UIView, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
-        if let alpha = self.outValue(1.0, toValue: 0.0, viewProgress: calculatedProgress) {
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
+        if let alpha = self.outValue(1.0, toValue: 0.0, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
             item.alpha = alpha
         }
     }
     
     static func moveIn(item: UIView, from: CGPoint, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
         if let constraint = item.xConstraint, let origin = constraint.MGD_originConstant {
-            if let value = self.inValue(origin + from.x, toValue: origin, viewProgress: calculatedProgress) {
+            if let value = self.inValue(origin + from.x, toValue: origin, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
                 constraint.constant = value
             }
         }
         if let constraint = item.yConstraint, let origin = constraint.MGD_originConstant {
-            if let value = self.inValue(origin + from.y, toValue: origin, viewProgress: calculatedProgress) {
+            if let value = self.inValue(origin + from.y, toValue: origin, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
                 constraint.constant = value
             }
         }
@@ -69,13 +79,16 @@ class MGDAnimator {
     
     static func moveOut(item: UIView, to: CGPoint, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
         if let constraint = item.xConstraint, let origin = constraint.MGD_originConstant {
-            if let value = self.outValue(origin, toValue: origin + to.x, viewProgress: calculatedProgress) {
+            if let value = self.outValue(origin, toValue: origin + to.x, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
                 constraint.constant = value
             }
         }
         if let constraint = item.yConstraint, let origin = constraint.MGD_originConstant {
-            if let value = self.outValue(origin, toValue: origin + to.y, viewProgress: calculatedProgress) {
+            if let value = self.outValue(origin, toValue: origin + to.y, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
                 constraint.constant = value
             }
         }
@@ -83,16 +96,22 @@ class MGDAnimator {
     
     static func zoomIn(item: UIView, from: CGPoint, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
-        if let x = self.inValue(from.x, toValue: 1.0, viewProgress: calculatedProgress),
-           let y = self.inValue(from.y, toValue: 1.0, viewProgress: calculatedProgress) {
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
+        if let x = self.inValue(from.x, toValue: 1.0, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower),
+           let y = self.inValue(from.y, toValue: 1.0, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
             item.transform = CGAffineTransformMakeScale(x, y)
         }
     }
     
     static func zoomOut(item: UIView, to: CGPoint, viewProgress: CGFloat) {
         let calculatedProgress = self.delayProgress(item, viewProgress: viewProgress) ?? viewProgress
-        if let x = self.outValue(1.0, toValue: to.x, viewProgress: calculatedProgress),
-            let y = self.outValue(1.0, toValue: to.y, viewProgress: calculatedProgress) {
+        let numbersOfPower: CGFloat = {
+            return (item as! MGDAnimatable).numbersOfPower
+        }()
+        if let x = self.outValue(1.0, toValue: to.x, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower),
+            let y = self.outValue(1.0, toValue: to.y, viewProgress: calculatedProgress, numbersOfPower: numbersOfPower) {
                 item.transform = CGAffineTransformMakeScale(x, y)
         }
     }
@@ -127,7 +146,11 @@ extension MGDAnimator {
         return nil
     }
     
-    static func inValue(fromValue: CGFloat, toValue: CGFloat, viewProgress: CGFloat) -> CGFloat? {
+    static func powerProgress(viewProgress: CGFloat, numbersOfPower: CGFloat) -> CGFloat {
+        return pow(viewProgress, numbersOfPower)
+    }
+    
+    static func inValue(fromValue: CGFloat, toValue: CGFloat, viewProgress: CGFloat, numbersOfPower: CGFloat = 3.0) -> CGFloat? {
         if viewProgress <= -1.0 {
             return fromValue
         }
@@ -140,7 +163,7 @@ extension MGDAnimator {
         }
     }
     
-    static func outValue(fromValue: CGFloat, toValue: CGFloat, viewProgress: CGFloat) -> CGFloat? {
+    static func outValue(fromValue: CGFloat, toValue: CGFloat, viewProgress: CGFloat, numbersOfPower: CGFloat = 3.0) -> CGFloat? {
         if viewProgress >= 1.0 {
             return toValue
         }
