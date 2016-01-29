@@ -21,19 +21,9 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.presentViewController(TeambitionPageViewController(), animated: false, completion: nil)
-        return
-        
-        
-        
-        
-        let vc = MGDPageViewController()
-        vc.viewControllers = [
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_0") as! MGDSceneViewController,
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_1") as! MGDSceneViewController,
-            UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Scene_2") as! MGDSceneViewController,
-        ]
-        self.presentViewController(vc, animated: false, completion: nil)
+//        self.presentViewController(TeambitionPageViewController(), animated: false, completion: nil)
+        self.presentViewController( UIStoryboard(name: "SimpleStart", bundle: nil).instantiateInitialViewController()!,
+            animated: false, completion: nil)
     }
 
 }

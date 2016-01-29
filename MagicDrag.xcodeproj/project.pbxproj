@@ -24,6 +24,12 @@
 		63AEF1E71C5A0C4F00687A9C /* Teambition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1E61C5A0C4F00687A9C /* Teambition.storyboard */; };
 		63AEF1E91C5A0C7700687A9C /* TeambitionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AEF1E81C5A0C7700687A9C /* TeambitionPageViewController.swift */; };
 		63AEF1EB1C5A0D4500687A9C /* Teambition.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1EA1C5A0D4500687A9C /* Teambition.xcassets */; };
+		63AEF1EE1C5AFE8900687A9C /* SimpleStart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1ED1C5AFE8900687A9C /* SimpleStart.storyboard */; };
+		63AEF1F01C5AFEB500687A9C /* SimpleStartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AEF1EF1C5AFEB500687A9C /* SimpleStartPageViewController.swift */; };
+		63AEF1F21C5B00B800687A9C /* SimpleStartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AEF1F11C5B00B800687A9C /* SimpleStartTableViewController.swift */; };
+		63AEF1F41C5B062800687A9C /* SimpleStart_StreamLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */; };
+		63AEF1F61C5B06A500687A9C /* SimpleStart_PushLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */; };
+		63AEF1F81C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */; };
 		F02649BB1C5919C500ACD8BC /* MGDLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +52,12 @@
 		63AEF1E61C5A0C4F00687A9C /* Teambition.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Teambition.storyboard; sourceTree = "<group>"; };
 		63AEF1E81C5A0C7700687A9C /* TeambitionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeambitionPageViewController.swift; sourceTree = "<group>"; };
 		63AEF1EA1C5A0D4500687A9C /* Teambition.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Teambition.xcassets; sourceTree = "<group>"; };
+		63AEF1ED1C5AFE8900687A9C /* SimpleStart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart.storyboard; sourceTree = "<group>"; };
+		63AEF1EF1C5AFEB500687A9C /* SimpleStartPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStartPageViewController.swift; sourceTree = "<group>"; };
+		63AEF1F11C5B00B800687A9C /* SimpleStartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStartTableViewController.swift; sourceTree = "<group>"; };
+		63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_StreamLayer.storyboard; sourceTree = "<group>"; };
+		63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_PushLayer.storyboard; sourceTree = "<group>"; };
+		63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleStart_FixLayer.storyboard; sourceTree = "<group>"; };
 		F02649BA1C5919C500ACD8BC /* MGDLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGDLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +138,7 @@
 		63AEF1E41C5A0ACC00687A9C /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				63AEF1EC1C5AFE7800687A9C /* Simple Start */,
 				63AEF1E51C5A0ACC00687A9C /* Teambition */,
 			);
 			path = Samples;
@@ -139,6 +152,19 @@
 				63AEF1EA1C5A0D4500687A9C /* Teambition.xcassets */,
 			);
 			path = Teambition;
+			sourceTree = "<group>";
+		};
+		63AEF1EC1C5AFE7800687A9C /* Simple Start */ = {
+			isa = PBXGroup;
+			children = (
+				63AEF1F11C5B00B800687A9C /* SimpleStartTableViewController.swift */,
+				63AEF1EF1C5AFEB500687A9C /* SimpleStartPageViewController.swift */,
+				63AEF1ED1C5AFE8900687A9C /* SimpleStart.storyboard */,
+				63AEF1F31C5B062800687A9C /* SimpleStart_StreamLayer.storyboard */,
+				63AEF1F51C5B06A500687A9C /* SimpleStart_PushLayer.storyboard */,
+				63AEF1F71C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard */,
+			);
+			path = "Simple Start";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +228,12 @@
 				6399BD131C585BEE00AEAA06 /* Info.plist in Resources */,
 				63AEF1EB1C5A0D4500687A9C /* Teambition.xcassets in Resources */,
 				6399BD121C585BEE00AEAA06 /* Main.storyboard in Resources */,
+				63AEF1F81C5B06EF00687A9C /* SimpleStart_FixLayer.storyboard in Resources */,
+				63AEF1EE1C5AFE8900687A9C /* SimpleStart.storyboard in Resources */,
 				6399BD101C585BEE00AEAA06 /* Assets.xcassets in Resources */,
 				63AEF1E71C5A0C4F00687A9C /* Teambition.storyboard in Resources */,
+				63AEF1F61C5B06A500687A9C /* SimpleStart_PushLayer.storyboard in Resources */,
+				63AEF1F41C5B062800687A9C /* SimpleStart_StreamLayer.storyboard in Resources */,
 				6399BD111C585BEE00AEAA06 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +247,7 @@
 			files = (
 				F02649BB1C5919C500ACD8BC /* MGDLayoutConstraint.swift in Sources */,
 				63AEF1E91C5A0C7700687A9C /* TeambitionPageViewController.swift in Sources */,
+				63AEF1F01C5AFEB500687A9C /* SimpleStartPageViewController.swift in Sources */,
 				6399BD321C58CB8500AEAA06 /* MGDAnimateImageView.swift in Sources */,
 				6399BD141C585BEE00AEAA06 /* ViewController.swift in Sources */,
 				6399BD0F1C585BEE00AEAA06 /* AppDelegate.swift in Sources */,
@@ -224,6 +255,7 @@
 				6399BD2E1C58CB3B00AEAA06 /* MGDAnimateView.swift in Sources */,
 				6399BD301C58CB6800AEAA06 /* MGDAnimateLabel.swift in Sources */,
 				6399BD2A1C58CA4400AEAA06 /* MGDSceneViewController.swift in Sources */,
+				63AEF1F21C5B00B800687A9C /* SimpleStartTableViewController.swift in Sources */,
 				6399BD281C58CA4400AEAA06 /* MGDPageViewController.swift in Sources */,
 				6399BD291C58CA4400AEAA06 /* MGDSceneLayer.swift in Sources */,
 				6399BD2C1C58CAEE00AEAA06 /* MGDAnimator.swift in Sources */,
