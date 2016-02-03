@@ -11,6 +11,7 @@ import UIKit
 protocol MGDAnimatable {
     
     var delaysOfAnimation: CGFloat { get set }
+    var endOfAnimation: CGFloat { get set }
     var numbersOfPower: CGFloat { get set }
     
     func layerAnimation(viewProgress: CGFloat)
@@ -139,7 +140,13 @@ extension MGDAnimator {
                     }
                 }
                 else {
-                    let absDelayProgress = (1.0 / (1.0 - item.delaysOfAnimation)) * absViewProgress + (-item.delaysOfAnimation / (1.0 - item.delaysOfAnimation))
+                    var absDelayProgress = (1.0 / (1.0 - item.delaysOfAnimation)) * absViewProgress + (-item.delaysOfAnimation / (1.0 - item.delaysOfAnimation))
+                    if item.endOfAnimation < 1.0 && item.endOfAnimation > 0.0 {
+                        absDelayProgress = absDelayProgress * (1.0 / item.endOfAnimation)
+                        if absDelayProgress > 1.0 {
+                            absDelayProgress = 1.0
+                        }
+                    }
                     if viewProgress < 0.0 {
                         return absDelayProgress - 1.0
                     }

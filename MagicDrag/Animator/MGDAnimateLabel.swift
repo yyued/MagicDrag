@@ -13,7 +13,8 @@ class MGDAnimateLabel: UILabel, MGDTouchable, MGDAnimatable, MGDAnimationFade, M
     @IBInspectable var canTouch: Bool = false
     
     @IBInspectable var delaysOfAnimation: CGFloat = 0.0
-    @IBInspectable var numbersOfPower: CGFloat = 3.0
+    @IBInspectable var endOfAnimation: CGFloat = 1.0
+    @IBInspectable var numbersOfPower: CGFloat = 2.0
     
     @IBInspectable var fadeIn: Bool = false
     @IBInspectable var fadeOut: Bool = false
